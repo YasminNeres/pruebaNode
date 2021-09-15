@@ -1,0 +1,17 @@
+{
+  "name": "01",
+  "version": "1.0.0",
+  "description": "Ejercicio_1",
+  "repository": "https://github.com/YasminNeres/pruebaNode.git",
+  "author": "neresdesouza.yasmin2gmail.com",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "build": "parcel build index.html",
+    "start": " parcel serve index.html --open"
+  },
+  "devDependencies": {
+    "@parcel/transformer-sass": "2.0.0-rc.0",
+    "parcel": "^2.0.0-rc.0"
+  }
+}
