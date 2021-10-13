@@ -1,0 +1,32 @@
+@import "mixin/main"
+
+$spacing : 2rem
+
+header, main, aside, footer
+  border-radius: $spacing / 2
+
+header
+  @include background(#FEFF00FF, #0001FFFF)
+  //background-color: green
+  height: calc(25% - #{$spacing})
+  margin:  $spacing / 2
+  width:  calc(100% - #{$spacing})
+
+main
+  background-color: bisque
+  margin: 0 $spacing / 2
+  height: 60%
+  width: calc(70% - #{$spacing} )
+
+aside
+  background-color: blue
+  height: 60%
+  width: calc(30% - #{$spacing} / 2)
+
+footer
+  @include background(#FEFF00FF ,#0001FFFF)
+  //background-color: orange
+  height: calc(15% - #{$spacing})
+  width: calc(100% - #{$spacing})
+  margin: $spacing / 2
+
