@@ -1,0 +1,103 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Ejercicios Interfaces</title>
+  <link rel="stylesheet" href="stylist/stl.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+</head>
+
+
+<body>
+
+<header>
+
+  <div class="hedr">
+    <div id="img">
+      <br clear="left">
+      <img src="images/micro.jpg" width="100" height="93" alt="" align="left"/>
+      <h2>Radio Patio</h2>
+    </div>
+
+    <div  style="position: absolute; right: 433px;"  width="100" height="93" alt="">
+
+      <a onclick="play()" class="material-icons">play_arrow</a>
+      <a onclick="pause()" class="material-icons">pause</a>
+      <a onclick="siguiente()" class="material-icons">arrow_forward</a>
+      <a onclick="volver()" class="material-icons">arrow_back</a>
+      <a onclick="alta()" class="material-icons">volume_up</a>
+      <a onclick="Bjar()" class="material-icons">volume_off</a>
+
+
+    </div>
+  </div>
+
+</header>
+
+<p>Inicio<br>
+  Donde estamos<br>
+  Nuestra Carta<br>
+  Horarios</p>
+
+
+<div style="position: absolute; left: 433px; top: 225px; width: 313px; height: 276px;" id="img2"  width="200" height="93" alt=""><img src="images/micro.jpg" width="377" height="334" alt=""/></div>
+
+
+
+</body>
+
+<footer>
+  <h4>Pie de pagina</h4>
+</footer>
+
+
+<script>
+var i=0;//la i es como el indice, para controlar cada cancion del array
+var canciones=[
+        "audio/AC-DC.mp3",//i=0
+        "audio/Aretha.mp3",
+        "audio/Bob Marley.mp3"
+]
+var musica=new Audio(canciones[i]);
+  function play(){
+    musica.play();
+  }
+
+  function pause(){
+    musica.pause();
+  }
+
+  function siguiente(){
+    i++;
+    if(i == canciones.length) {
+      i = 0;
+    }
+    musica.src=canciones[i];
+    musica.play();
+  }
+
+  function volver(){
+    i--;
+    if(i < 0) {
+      i = canciones.length-1;
+    }
+    musica.src=canciones[i];
+    musica.play();
+  }
+
+
+  function alta(){
+    musica.volume+=0.1;
+  }
+
+  function Bjar(){
+    musica.volume-=0.1;
+  }
+
+
+
+
+
+</script>
+</html>
